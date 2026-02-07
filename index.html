@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drafted3.design | Visual Office</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'black': '#050505',
+                        'paper': '#f4f4f5',
+                        'accent': '#FF3B00',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                        mono: ['Courier New', 'Courier', 'monospace'],
+                    },
+
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased">
+
+
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-[#f4f4f5] border-b border-black">
+        <div class="flex justify-between items-center h-20 px-6 md:px-12">
+            <a href="#" class="font-display font-bold text-2xl tracking-tighter hover:text-accent transition-colors lowercase">
+                drafted3.design
+            </a>
+
+            <nav class="hidden md:flex space-x-12">
+                <a href="#work" class="nav-link text-xs font-mono uppercase tracking-widest font-bold">Work</a>
+                <a href="#services" class="nav-link text-xs font-mono uppercase tracking-widest font-bold">Services</a>
+                <a href="#about" class="nav-link text-xs font-mono uppercase tracking-widest font-bold">Studio</a>
+                <a href="#contact" class="bg-black text-white px-6 py-3 text-xs font-mono uppercase tracking-widest hover:bg-accent hover:border-accent border border-black transition-all">Start Project</a>
+            </nav>
+
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-20 flex flex-col justify-between border-b border-black">
+        <div class="flex-grow flex items-center px-6 md:px-12 py-20 relative overflow-hidden">
+            <!-- Background Decoration -->
+            <div class="absolute right-0 top-20 opacity-5 font-display text-[20vw] leading-none pointer-events-none select-none">
+                03
+            </div>
+
+            <h1 class="font-display text-[12vw] md:text-[13vw] leading-[0.85] font-bold tracking-tighter uppercase break-words z-10">
+                Visual<br>
+                <span class="text-transparent" style="-webkit-text-stroke: 2px #050505;">Impact</span><br>
+                Engineers
+            </h1>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 border-t border-black">
+            <div class="p-8 border-b md:border-b-0 md:border-r border-black">
+                <span class="block text-xs font-mono uppercase tracking-widest mb-3 text-gray-500">// EST. 2024</span>
+                <p class="text-lg leading-tight font-medium max-w-xs">We design digital products that refuse to be ignored.</p>
+            </div>
+            <div class="p-8 border-b md:border-b-0 md:border-r border-black flex items-center justify-center bg-accent text-white group cursor-pointer overflow-hidden relative">
+                <div class="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <a href="#work" class="relative z-10 font-display text-2xl uppercase tracking-wider flex items-center gap-2">
+                    Scroll Down <i class="fas fa-arrow-down animate-bounce"></i>
+                </a>
+            </div>
+            <div class="p-8 flex flex-col justify-between hover:bg-black hover:text-white transition-colors duration-300">
+                <span class="block text-xs font-mono uppercase tracking-widest opacity-60">Status</span>
+                <p class="text-xl font-bold flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></span>
+                    Available for Hire
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Strip -->
+    <div class="border-b border-black bg-black text-white py-4 overflow-hidden relative">
+        <div class="ticker-wrap">
+            <div class="ticker font-display text-4xl uppercase tracking-wider font-bold">
+                Graphic Design &nbsp;<span class="text-accent">•</span>&nbsp; Branding &nbsp;<span class="text-accent">•</span>&nbsp; Web Development &nbsp;<span class="text-accent">•</span>&nbsp; UI/UX Design &nbsp;<span class="text-accent">•</span>&nbsp; Motion Graphics &nbsp;<span class="text-accent">•</span>&nbsp; Video Editing &nbsp;<span class="text-accent">•</span>&nbsp; Social Media &nbsp;<span class="text-accent">•</span>&nbsp; Thumbnails &nbsp;<span class="text-accent">•</span>&nbsp;
+                 Graphic Design &nbsp;<span class="text-accent">•</span>&nbsp; Branding &nbsp;<span class="text-accent">•</span>&nbsp; Web Development &nbsp;<span class="text-accent">•</span>&nbsp; UI/UX Design &nbsp;<span class="text-accent">•</span>&nbsp; Motion Graphics &nbsp;<span class="text-accent">•</span>&nbsp; Video Editing &nbsp;<span class="text-accent">•</span>&nbsp; Social Media &nbsp;<span class="text-accent">•</span>&nbsp; Thumbnails &nbsp;<span class="text-accent">•</span>&nbsp;
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Work (Gallery List) -->
+    <section id="work" class="border-b border-black">
+        <div class="grid grid-cols-1 md:grid-cols-4">
+            <!-- Sidebar Title -->
+            <div class="p-8 md:border-r border-black md:sticky md:top-20 md:h-screen bg-[#f4f4f5] z-10 flex md:block items-center justify-between">
+                <h2 class="font-display text-4xl md:text-6xl uppercase transform md:rotate-90 md:origin-top-left md:translate-x-16 md:translate-y-12">Selected<br>Works</h2>
+                <i class="fas fa-arrow-right md:hidden text-2xl"></i>
+            </div>
+
+            <!-- Project List -->
+            <div class="col-span-3 bg-white">
+                
+                <!-- Project 1 -->
+                <div class="group relative border-b border-black p-8 md:p-20 hover:bg-[#f4f4f5] transition-colors cursor-pointer project-link">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center relative z-20">
+                        <h3 class="font-display text-5xl md:text-8xl uppercase font-bold text-transparent" style="-webkit-text-stroke: 2px black; color: transparent;">
+                            <span class="group-hover:text-black transition-colors duration-300">Nike</span> Air
+                        </h3>
+                        <div class="mt-4 md:mt-0 text-right">
+                            <span class="block text-xs font-mono uppercase tracking-widest mb-1 text-accent">Advertising / Motion</span>
+                            <span class="block text-xs text-gray-500">2024</span>
+                        </div>
+                    </div>
+                    <!-- Hover Image -->
+                    <img src="https://placehold.co/600x400/000/FFF?text=Nike+Motion" class="project-img absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 md:w-[500px] opacity-0 transition-all duration-300 pointer-events-none z-30 shadow-2xl border-2 border-black rotate-0 grayscale group-hover:grayscale-0" alt="Work">
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative border-b border-black p-8 md:p-20 hover:bg-[#f4f4f5] transition-colors cursor-pointer project-link">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center relative z-20">
+                        <h3 class="font-display text-5xl md:text-8xl uppercase font-bold text-transparent" style="-webkit-text-stroke: 2px black; color: transparent;">
+                            <span class="group-hover:text-black transition-colors duration-300">Vogue</span> Mag
+                        </h3>
+                        <div class="mt-4 md:mt-0 text-right">
+                            <span class="block text-xs font-mono uppercase tracking-widest mb-1 text-accent">Web Design / UI</span>
+                            <span class="block text-xs text-gray-500">2023</span>
+                        </div>
+                    </div>
+                    <img src="https://placehold.co/600x400/EEE/111?text=Vogue+UI" class="project-img absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 md:w-[500px] opacity-0 transition-all duration-300 pointer-events-none z-30 shadow-2xl border-2 border-black rotate-0 grayscale group-hover:grayscale-0" alt="Work">
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative border-b border-black p-8 md:p-20 hover:bg-[#f4f4f5] transition-colors cursor-pointer project-link">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center relative z-20">
+                        <h3 class="font-display text-5xl md:text-8xl uppercase font-bold text-transparent" style="-webkit-text-stroke: 2px black; color: transparent;">
+                            <span class="group-hover:text-black transition-colors duration-300">Spotify</span>
+                        </h3>
+                        <div class="mt-4 md:mt-0 text-right">
+                            <span class="block text-xs font-mono uppercase tracking-widest mb-1 text-accent">Brand Identity</span>
+                            <span class="block text-xs text-gray-500">2023</span>
+                        </div>
+                    </div>
+                    <img src="https://placehold.co/600x400/1DB954/000?text=Spotify+Rebrand" class="project-img absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 md:w-[500px] opacity-0 transition-all duration-300 pointer-events-none z-30 shadow-2xl border-2 border-black rotate-0 grayscale group-hover:grayscale-0" alt="Work">
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group relative border-b border-black p-8 md:p-20 hover:bg-[#f4f4f5] transition-colors cursor-pointer project-link">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center relative z-20">
+                        <h3 class="font-display text-5xl md:text-8xl uppercase font-bold text-transparent" style="-webkit-text-stroke: 2px black; color: transparent;">
+                            <span class="group-hover:text-black transition-colors duration-300">MrBeast</span>
+                        </h3>
+                        <div class="mt-4 md:mt-0 text-right">
+                            <span class="block text-xs font-mono uppercase tracking-widest mb-1 text-accent">Thumbnail Design</span>
+                            <span class="block text-xs text-gray-500">2024</span>
+                        </div>
+                    </div>
+                    <img src="https://placehold.co/600x400/FF0000/FFF?text=Viral+Thumbnail" class="project-img absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 md:w-[500px] opacity-0 transition-all duration-300 pointer-events-none z-30 shadow-2xl border-2 border-black rotate-0 grayscale group-hover:grayscale-0" alt="Work">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Capabilities -->
+    <section id="services" class="border-b border-black bg-white">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="p-12 md:p-24 border-b md:border-b-0 md:border-r border-black flex flex-col justify-center">
+                <h2 class="font-display text-6xl uppercase font-bold mb-8">What We Do.</h2>
+                <p class="text-xl leading-relaxed text-gray-800 max-w-md">
+                    We don't just make things pretty. We build functional, scalable, and memorable digital assets. From the first pixel to the final frame.
+                </p>
+                <div class="mt-12">
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-widest font-bold border-b-2 border-accent pb-1 hover:text-accent transition-colors">
+                        Download Capabilities Deck <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="bg-black text-white">
+                <div class="grid grid-cols-2">
+                    <!-- Grid Item 1 -->
+                    <div class="p-8 border-b border-r border-gray-800 hover:bg-[#111] transition-colors group">
+                        <i class="fas fa-crop-simple mb-6 text-3xl text-accent group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-display text-2xl uppercase mb-4">Design</h3>
+                        <ul class="text-xs font-mono text-gray-400 space-y-2">
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Graphic Design</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Branding & Identity</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Print Media</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grid Item 2 -->
+                    <div class="p-8 border-b border-gray-800 hover:bg-[#111] transition-colors group">
+                        <i class="fas fa-code mb-6 text-3xl text-accent group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-display text-2xl uppercase mb-4">Development</h3>
+                        <ul class="text-xs font-mono text-gray-400 space-y-2">
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Web Development</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> UI/UX Design</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Frontend Engineering</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grid Item 3 -->
+                    <div class="p-8 border-r border-gray-800 hover:bg-[#111] transition-colors group">
+                        <i class="fas fa-video mb-6 text-3xl text-accent group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-display text-2xl uppercase mb-4">Motion</h3>
+                        <ul class="text-xs font-mono text-gray-400 space-y-2">
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Video Editing</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Motion Graphics</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> 3D Animation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grid Item 4 -->
+                    <div class="p-8 hover:bg-[#111] transition-colors group">
+                        <i class="fas fa-bolt mb-6 text-3xl text-accent group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-display text-2xl uppercase mb-4">Content</h3>
+                        <ul class="text-xs font-mono text-gray-400 space-y-2">
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Social Media Assets</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Thumbnail Design</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Content Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-accent text-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 border-b border-black">
+            <div class="p-12 md:p-24 border-b md:border-b-0 md:border-r border-black flex flex-col justify-between">
+                <div>
+                    <span class="block text-xs font-mono uppercase tracking-widest mb-4 opacity-70">Got a Project?</span>
+                    <h2 class="font-display text-7xl md:text-8xl font-bold uppercase leading-[0.85] mb-8">Let's<br>Build.</h2>
+                </div>
+                <div>
+                     <a href="mailto:hello@drafted3.design" class="text-2xl md:text-3xl font-bold underline decoration-2 underline-offset-4 hover:text-black transition-colors">hello@drafted3.design</a>
+                </div>
+            </div>
+            
+            <div class="bg-white text-black p-12 md:p-24 flex flex-col justify-center">
+                <form class="space-y-8" onsubmit="event.preventDefault(); alert('Message sent to drafted3.design!');">
+                    <div class="relative">
+                        <input type="text" class="peer w-full bg-transparent border-b-2 border-black py-2 focus:outline-none focus:border-accent text-xl font-display placeholder-transparent" placeholder="Name">
+                        <label class="absolute left-0 -top-4 text-xs font-mono uppercase font-bold transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-xs">Name</label>
+                    </div>
+                    <div class="relative">
+                        <input type="email" class="peer w-full bg-transparent border-b-2 border-black py-2 focus:outline-none focus:border-accent text-xl font-display placeholder-transparent" placeholder="Email">
+                        <label class="absolute left-0 -top-4 text-xs font-mono uppercase font-bold transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-xs">Email</label>
+                    </div>
+                    <div class="relative">
+                        <textarea rows="2" class="peer w-full bg-transparent border-b-2 border-black py-2 focus:outline-none focus:border-accent text-xl font-display placeholder-transparent" placeholder="Message"></textarea>
+                        <label class="absolute left-0 -top-4 text-xs font-mono uppercase font-bold transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-xs">Brief</label>
+                    </div>
+                    <button class="w-full bg-black text-white font-display uppercase font-bold text-xl py-6 hover:bg-accent hover:text-white transition-colors border border-black group">
+                        Send to Drafted3 <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center p-6 bg-black text-white text-xs font-mono uppercase tracking-widest">
+            <div class="mb-4 md:mb-0">&copy; 2024 drafted3.design | All Rights Reserved.</div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-accent transition-colors">Instagram</a>
+                <a href="#" class="hover:text-accent transition-colors">Twitter</a>
+                <a href="#" class="hover:text-accent transition-colors">Behance</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
