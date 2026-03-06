@@ -489,12 +489,13 @@
             <div class="bg-white p-12 md:p-24">
                 <span class="text-xs font-mono uppercase">// Say Hello</span>
                 <p class="font-display text-2xl uppercase mt-2">Have a project in mind?</p>
-                <form id="contactForm" class="mt-8 space-y-6" onsubmit="event.preventDefault(); alert('Message sent successfully!'); this.reset();">
-                    <input type="hidden" id="subject" name="_subject" value="New Project Inquiry">
+                <form id="contactForm" class="mt-8 space-y-6" action="https://formspree.io/f/mykdapbv" method="POST">
+                    <input type="hidden" name="_subject" value="New Project Inquiry">
                     <input type="text" id="name" name="name" placeholder="Your Name" class="w-full border-b-4 border-black py-2 focus:border-accent outline-none transition-colors bg-transparent" required>
                     <input type="email" id="email" name="email" placeholder="Your Email" class="w-full border-b-4 border-black py-2 focus:border-accent outline-none transition-colors bg-transparent" required>
                     <textarea id="message" name="message" placeholder="Tell us about your project (optional)" rows="3" class="w-full border-b-4 border-black py-2 focus:border-accent outline-none transition-colors bg-transparent"></textarea>
                     <button type="submit" id="submitBtn" class="w-full bg-black text-white py-4 font-mono uppercase font-bold hover:bg-accent border-4 border-black transition-colors">Start Your Project</button>
+                    <p id="formStatus" class="text-center text-sm font-mono hidden"></p>
                 </form>
             </div>
         </div>

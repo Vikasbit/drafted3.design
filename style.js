@@ -26,7 +26,82 @@ function toggleFaq(element) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+// Formspree Form Handling
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+    
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-50');
+            
+            if (formStatus) {
+                formStatus.classList.add('hidden');
+            }
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success
+                    form.reset();
+                    submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i> Sent!';
+                    submitBtn.classList.remove('bg-black');
+                    submitBtn.classList.add('bg-green-600');
+                    
+                    if (formStatus) {
+                        formStatus.textContent = 'Message sent successfully!';
+                        formStatus.classList.remove('hidden');
+                        formStatus.classList.add('text-green-600');
+                    }
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.classList.remove('bg-green-600');
+                        submitBtn.classList.add('bg-black');
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-50');
+                    }, 3000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Error
+                submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> Error';
+                submitBtn.classList.remove('bg-black');
+                submitBtn.classList.add('bg-red-600');
+                
+                if (formStatus) {
+                    formStatus.textContent = 'Oops! Something went wrong. Please try again.';
+                    formStatus.classList.remove('hidden');
+                    formStatus.classList.add('text-red-600');
+                }
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.classList.remove('bg-red-600');
+                    submitBtn.classList.add('bg-black');
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-50');
+                }, 3000);
+            }
+        });
+    }
+    
     // Mobile Menu functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenu');
